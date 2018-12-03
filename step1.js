@@ -12,13 +12,14 @@ function getAndPrintHTMLChunks () {
 
  https.get(requestOptions, function (response) {
   var body = '';
+
   // Encoding Type Statement //
   response.setEncoding('utf8');
 
   // Callback start when chunk recieved //
   response.on('data', function (data) {
     body += data;
-    console.log(data);
+    console.log(data.concat('\n'));
   });
 
   // the callback is invoked when all of the data has been received
