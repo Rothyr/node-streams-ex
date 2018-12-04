@@ -22,4 +22,3 @@ function getAndPrintHTML (options) {
   });
 }
 
-getAndPrintHTML(requestOptions);

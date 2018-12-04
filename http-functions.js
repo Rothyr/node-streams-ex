@@ -1,14 +1,6 @@
-
-
-
 var https = require('https');
-var requestWebsite = {
-  host: 'sytantris.github.io',
-  path: '/http-examples/step4.html'
-};
 
-
-function getHTML (websites, callback) {
+module.exports = function getHTML (websites, callback) {
 
   https.get(websites, function(response) {
 
@@ -29,16 +21,5 @@ function getHTML (websites, callback) {
     });
   });
 
-
-
-}
-
-function printHTML (html) {
-  console.log(html);
-}
-
-
-
-getHTML(requestWebsite, printHTML);
-
+};
 
